@@ -1,0 +1,107 @@
+.sub-top-sitebar
+  padding-top: 70px
+  background-color: $sub-sitebar
+  min-height: 190px
+//LEFT LOGOTYPE AND TITLE COMPANI
+.title-logotype-wrapper
+  width: 100%
+  height: 100%
+  display: inline-flex
+
+.logotype-block
+  margin-top: 10px
+  width: 20%
+  height: 80%
+  float: left
+  background-image: url('/images/header/Logotype-rounft.png')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: left center
+
+.main-title-block
+  float: left
+  margin-bottom: 30px
+  display: block
+  hr
+    width: 70%
+    margin-top: 0
+  summary
+    text-align: center
+    font-family: $main-title-font
+    letter-spacing: .5px
+    color: $black-gray-color
+  h1
+    font-size: 22px
+    text-align: center
+    margin-bottom: 0
+    color: $black-gray-color
+    font-family: $main-title-font2
+    text-transform: uppercase
+    letter-spacing: 4px
+  span, hr
+    color: $gray-color-title
+//LEFT LOGOTYPE AND TITLE COMPANI
+//--------------------------------------
+//CENTER BLOCK ADDRES AND WORKING HOURS
+.block-sub-meny-addres,
+.block-sub-meny-work-hours
+  width: 50%
+  height: 100%
+  float: left
+  .addres,
+  .work-hours
+    height: 100%
+    font-size: .8em
+    margin-left: 30px
+    padding-left: 10px
+    p
+      height: 100%
+      margin: 0
+      display: flex
+      align-items: center
+  .addres
+    padding-right: 10px
+
+.block-sub-meny-workin-phone
+  height: 100%
+  width: 100%
+  .workin-phone
+    height: 100%
+    font-size: 1.2em
+    margin-left: 30px
+    padding-left: 10px
+    span
+      height: 50%
+      margin: 0
+      display: flex
+      // align-items: center
+      &:first-child
+        align-items: flex-end
+      &:last-child
+        align-items: baseline
+      a
+        text-decoration: none
+        color: $accent-color
+
+
+.fa-home,
+.fa-clock-o,
+.fa-mobile
+  position: absolute
+  top: 50%
+  font-size: 2em
+  transform: translate(0, -50%)
+
+
+.screen-mobile-view-phone
+  display: none
+  width: 100%
+  text-align: center
+  margin: 20px auto
+  span
+    font-size: 1.2em
+    &:first-child
+      margin-right: 30px
+    a
+      color: $accent-color
+      text-decoration: none

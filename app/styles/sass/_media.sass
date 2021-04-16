@@ -1,0 +1,139 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+  .service-img-parallax,
+  .price-img-parallax
+    max-height: 100%
+    background-size: cover
+
+  .dynamic-informer
+    .numeric2,
+    .numeric1,
+      font-size: 3em
+    blockquote
+      font-size: 1.4em
+      padding: 0
+
+  .service-informer
+    width: 90%
+    margin: 0 auto
+    ul
+      margin: 0
+      padding: 0
+      li
+        &:last-child
+          margin-bottom: 20px
+        .service-description
+          margin: 10px auto 0
+          h4
+            font-size: 1.5em
+
+  .hidden-search-block
+    display: none
+
+  .col-not-padding
+    padding: 0
+
+  .block-sub-meny-workin-phone
+    display: none
+
+  .screen-mobile-view-phone
+    display: block
+
+  .slide-header-block
+    display: none
+
+  .top-doctor-block
+    .main-doctor-image
+      position: unset
+      max-width: 600px
+      float: none
+      margin: 0 auto
+  .price-card
+    margin: 15px auto
+  .price-description
+    h4,
+    h5
+      font-size: 1.4em
+    p
+      font-size: 1em
+// ≥992px
++media-breakpoint-down(md)
+  .dynamic-informer
+    margin: 0 auto 50px
+    width: 90%
+
+  .service-informer
+    width: 90%
+    overflow: visible
+
+  .top-nav
+    display: none
+// ≥768px
++media-breakpoint-down(sm)
+  .btn-free-consultation
+    margin-top: 12px
+    width: 160px
+    padding-top: 10px
+    p
+      display: none
+    &::before
+      content: 'Консультация'
+      color: $accent-color
+      font-weight: bold
+
+  .main-doctor-text
+    .wellcome
+      text-decoration: none
+
+  .title-section
+    font-size: .6em
+
+// ≥576px
++media-breakpoint-down(xs)
+  p
+    font-size: 1.3em
+    line-height: 1.4
+
+  .btn-free-consultation
+    display: none
+
+  .btn-free-consultation-xs
+    margin-top: -3px
+    display: block
+    p
+      font-size: 1.1em
+
+  .main-doctor-text
+    margin: 30px auto auto 20px
+    blockquote,
+    big
+      font-size: 1.2em
+
+  .dynamic-informer
+     .numeric1,
+     .numeric2
+        font-size: 2em
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+  .btn-free-consultation
+    display: block
+
+  .btn-free-consultation-xs
+    display: none
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+  .burger-meny-btn
+    display: none
+// ≤1200px
++media-breakpoint-up(xl)

@@ -1,0 +1,78 @@
+// USER VARIABLES SECTION
+$accent-color: #f66e60
+$sub-sitebar: #fdf9fa
+$black-gray-color: #444446
+$gray-color-title: #8b949c
+//#8c959a
+//--------------------------------------
+$main-title-font: Montserrat-Regular, sans-serif
+$custom-font: Montserrat-Regular, sans-serif
+$main-title-font2: Europe-Ext, sans-serif
+$main-numeric-dinamic: Europe-Ext-Bold, sans-serif
+
+//--------------------------------------
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/_forms.scss' // Optional Bootstrap Forms
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+		font-display: swap
+
+@include font('FontAwesome', normal, 400, '../fonts/fontawesome-webfont.woff')
+@include font('Europe-Ext', normal, 200, '../fonts/Europe_Ext.woff')
+@include font('Europe-Ext-Bold', normal, 800, '../fonts/Europe_Ext_Bold.woff')
+@include font('Montserrat-Regular', normal, 200, '../fonts/Montserrat-regular-webfont.woff')
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	margin: 0
+	// font-family: $userfont
+	font-family: $custom-font
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+a
+	text-decoration: none
