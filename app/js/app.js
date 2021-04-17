@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						return 'True'
 	  			}
 		}
-		
+
 		if (scrollTop > 650) {
 
 			var x = count_cookie()
@@ -77,12 +77,34 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('body').css({'overflow-y': 'hidden'})
 		$('.wrapper-hidden-cover').fadeIn(1000)
 		$('.phone-number-and-name').delay(1000).fadeIn(1000)
-		console.log("Нажмал копку!")
+		// console.log("Нажмал копку!")
 	})
+
 	$(':input[name=CancelBackCall]').on('click', function(){
 		$('.phone-number-and-name').fadeOut(1000)
 		$('.wrapper-hidden-cover').delay(1000).fadeOut(1000)
 		$('body').css({'overflow-y': 'auto'})
+	})
+
+	$(':input[name=AddBackCall]').on('click', function(){
+		var ph = $('#yorPhoneNumber').val()
+		var nm = $('#yorName').val()
+
+		$.ajax({
+			url: "https://sms.ru/sms/send",
+			data: {
+				api_id: "8322F308-7A4F-9857-5AC0-A73679A6D284",
+				from: "Корпорация здоровья",
+				to: "79183146123",
+				msg: "Обратный звонок " + ph + " от " + nm,
+			},
+			success: function(data){
+				alert(data)
+			},
+		})
+		$('.phone-number-and-name').html("<div class='sms-callback'>Спасибо "+nm+ ", ожидайте звонка</div>")
+				.delay(2000).fadeOut(1000)
+				$('.wrapper-hidden-cover').delay(1000).fadeOut(1000)
 	})
 
 	$(window).scroll(function(){
